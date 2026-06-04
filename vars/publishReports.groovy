@@ -1,4 +1,4 @@
 def call()
 {
- archiveArtifacts artifacts: '**/test-output/**/*'
+  archiveArtifacts artifacts: '**/target/surefire-reports/**/*'
 }

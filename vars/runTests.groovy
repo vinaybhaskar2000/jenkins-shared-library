@@ -1,4 +1,4 @@
-def call()
+def call(String suiteName)
 {
-  bat 'mvn clean test -Pqa -DsuiteXmlFile=testng_sanity.xml'
+  bat 'mvn clean test -Pqa -DsuiteXmlFile=${suiteName}'
 }

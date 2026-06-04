@@ -1,4 +1,4 @@
 def call()
 {
-  archiveArtifacts artifacts:'**/target/*.html'
+ archiveArtifacts artifacts: '**/test-output/**/*'
 }

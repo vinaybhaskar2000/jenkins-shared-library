@@ -1,9 +1,13 @@
-def call(String repoUrl, String branchName='main')
+def call(Map config=[:])
 {
   stage('Checkout')
   {
     echo "Checking out Code From  ${repoUrl}"
-    git ( branch: branchName, url = repoUrl)
+    git ( 
+      url = config.repoUrl,      
+      ranch: config.branchName 
+            
+        )
       
   }
 

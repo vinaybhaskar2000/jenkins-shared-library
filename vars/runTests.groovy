@@ -1,4 +1,11 @@
-def call(String env, String browser, String suiteName) {
+import org.framework.utils.MavenUtils
 
-    bat "mvn clean test -P${env} -Dbrowser=${browser} -DsuiteXmlFile=${suiteName}"
+def call(Map config) {
+
+    def command = MavenUtils.getMavenCommand(
+        config.browser,
+        config.suiteName
+    )
+
+    bat command
 }

@@ -25,7 +25,10 @@ def call(Map config) {
 
                 steps {
 
-                    checkoutCode()
+                    checkoutCode(
+                    'https://github.com/vinaybhaskar2000/qa-automation-framework.git',
+                    'main'
+)
                 }
             }
 

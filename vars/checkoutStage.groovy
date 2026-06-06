@@ -5,7 +5,7 @@ def call(Map config = [:])
     echo "Checking out Code From  ${config.repoUrl}"
     git ( 
       url = config.repoUrl,      
-      ranch: config.branchName 
+      branch: config.branchName 
             
         )
       
